@@ -1,19 +1,117 @@
+
 body {
-    background: #2E2929;
+    background: url(../Imagenes/digital-art-volcano-illustration.jpg);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
 }
 
-h1{
+.content {
+    margin-left: 200px;
+    padding: 20px 40px;
+    flex: 1;
+    max-width: calc(100% - 240px);
+    line-height: 1.6;
+}
+
+h1 {
     color: white;
     font-size: 50px;
     background: green;
-    margin: 20px 50px;
+    margin: 20px 0;
     padding: 20px;
+    border: 5px solid black;
+    border-radius: 8px;
 }
 
-h2{
+h2 {
+    color: white;
+    font-size: 30px;
+    font-size: 25px 0 15px 0;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: white;
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+
+div {
     color: white;
 }
 
-div{
+p {
     color: white;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+ul {
+    color: white;
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+li {
+    color: white;
+    margin: 8px 0;
+}
+
+strong {
+    color: lightgreen;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100vh;
+    background-color: cadetblue;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 0 8px;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    background-color: black;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: darkcyan;
+    transform: translateY(5px);
+}
+
+.content a {
+    color:purple;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.content a:hover {
+    text-decoration: underline;
 }
