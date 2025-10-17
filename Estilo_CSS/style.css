@@ -2,6 +2,7 @@
 body {
     background: url(../Imagenes/digital-art-volcano-illustration.jpg);
     background-attachment: fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,55 +15,52 @@ body {
     flex: 1;
     max-width: calc(100% - 240px);
     line-height: 1.6;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 h1 {
-    color: white;
+    color: #F8F9FA;
     font-size: 50px;
-    background: green;
+    background: rgba(255, 107, 53, 0.9);
     margin: 20px 0;
     padding: 20px;
-    border: 5px solid black;
-    border-radius: 8px;
+    border: 5px solid #FF6B35;
+    border-radius: 12px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 h2 {
-    color: white;
+    color: #F4E04D;
     font-size: 30px;
     font-size: 25px 0 15px 0;
-    border-bottom: 2px solid white;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #76C7C0;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
 h3 {
-    color: white;
+    color: #76C7C0;
     font-size: 22px;
     margin: 20px 0 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-div {
-    color: white;
+p, div {
+    color: #F8F9FA;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-p {
-    color: white;
-    margin: 15px 0;
-    text-align: justify;
-}
-
-ul {
-    color: white;
-    margin: 15px 0;
-    padding-left: 25px;
-}
-
-li {
-    color: white;
-    margin: 8px 0;
+ul, li {
+    color: #F8F9FA;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
 strong {
-    color: lightgreen;
+    color: #F4E04D;
+    font-weight: 600;
 }
 
 nav {
@@ -71,13 +69,13 @@ nav {
     left: 0;
     width: 180px;
     height: 100vh;
-    background-color: cadetblue;
+    background-color: linear-gradient(180deg, #2C5F41 0%, #1F4A36 100%);
     padding: 15px;
     font-size: 18px;
-    border-radius: 0 8px;
+    border-radius: 0 12px 12px 0;
     z-index: 1000;
     overflow-y: auto;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -86,32 +84,41 @@ nav ul {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 nav a {
     display: block;
-    color: white;
+    color: #F8F9FA;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border-radius: 8px;
     transition: all 0.3s ease;
     text-align: center;
-    background-color: black;
+    background: rgba(26, 26, 26, 0.8);
     font-weight: 500;
+    border: 1px solid transparent;
 }
 
 nav a:hover {
-    background-color: darkcyan;
+    background-color: linear-gradient(135deg, #4A90A4 0%, #76C7C0 100%);
     transform: translateY(5px);
+    box-shadow: 0 4px 12px rgba(118, 199, 192, 0.3);
+    border: 1px solid #76C7C0;
 }
 
 .content a {
-    color:purple;
+    color: #76C7C0;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .content a:hover {
+    color: #F4E04D;
     text-decoration: underline;
+}
+
+.content > * {
+    backdrop-filter: blur(1px);
 }
