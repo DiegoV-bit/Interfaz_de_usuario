@@ -20,6 +20,7 @@ body::before {
     background: url(../Imagenes/digital-art-volcano-illustration.jpg);
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     filter: blur(10px);
     z-index: -1;
 }
@@ -34,6 +35,8 @@ body::before {
     border-radius: 10px;
     margin-top: 20px;
     margin-right: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h1 {
@@ -50,10 +53,13 @@ h1 {
 h2 {
     color: #fce431;
     font-size: 30px;
-    font-size: 25px 0 15px 0;
+    margin: 25px 0 15px 0;
     border-bottom: 2px solid #76C7C0;
     padding-bottom: 8px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.2); /* Fondo sutil para mejor contraste */
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 h3 {
@@ -84,13 +90,15 @@ nav {
     left: 0;
     width: 180px;
     height: 100vh;
-    background-color: linear-gradient(180deg, #2C5F41 0%, #1F4A36 100%);
+    background: linear-gradient(180deg, rgba(44, 95, 65, 0.95) 0%, rgba(31, 74, 54, 0.95) 100%);
     padding: 15px;
     font-size: 18px;
     border-radius: 0 12px 12px 0;
     z-index: 1000;
     overflow-y: auto;
     box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-right: 2px solid rgba(118, 199, 192, 0.3);
 }
 
 nav ul {
@@ -117,7 +125,7 @@ nav a {
 
 nav a:hover {
     background-color: linear-gradient(135deg, #4A90A4 0%, #76C7C0 100%);
-    transform: translateY(5px);
+    transform: translateX(5px);
     box-shadow: 0 4px 12px rgba(118, 199, 192, 0.3);
     border: 1px solid #76C7C0;
 }
@@ -136,4 +144,10 @@ nav a:hover {
 
 .content > * {
     backdrop-filter: blur(1px);
+}
+
+/* Mejora general del texto */
+p, div, ul, li {
+    color: #F8F9FA;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Sombra más fuerte */
 }
