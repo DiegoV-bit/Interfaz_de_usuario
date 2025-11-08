@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Registro</title>
+    </head>
+    <body>
+        <h1>Inscripción</h1>
+
+        <form action="/Procesar_inscripcion" method="post">
+            <fieldset>
+
+                <legend>Datos Personales <span class="required">*</span></legend>
+
+                <label for="nombre">Nombre completo: <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required 
+                placeholder="Ej: Eduardo Piñas"
+                pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}"
+                maxlength="50">
+
+                <label for="email">Correo electrónico: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required
+                placeholder="ejemplo@correo.com">
+
+                <label for="telefono">Teléfono: <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required
+                placeholder="+56 9438 0012"
+                pattern="[+]?[0-9\s]{9,15}">
+
+                <label for="fecha-nacimiento">Fecha de nacimiento: <span class="required">*</span></label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required
+                min="1950-01-01" max="2010-12-31">
+                
+                <label for="sitio-web">Sitio web personal (opcional):</label>
+                <input type="url" name="sitio-web" id="sitio-web"
+                placeholder="https://www.ejemplito.com">
+
+                <label for="password">Crear Contraseña: <span class="required">*</span></label>
+                <input type="password" name="password" id="password" required
+                placeholder="Minimo 8 caracteres"
+                minlength="8" maxlength="20">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias e Intereses</legend>
+                    
+                    <label>Talleres de interes (Seleccione uno o varios):</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="talleres" value="IA">
+                            Inteligencia Artificial
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="talleres" value="web">
+                            Desarrollo web
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="talleres" value="data">
+                            Ciencia de Datos
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="talleres" value="movil">
+                            Desarrollo Móvil
+                        </label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="talleres" value="ux">
+                            UX/UI Design
+                        </label>
+                    </div>
+
+                    <label for="color-tema">Color Preferido para Credencial:</label>
+                    <input type="color" id="color-tema" name="color-tema" value="#4CAF50">
+            
+                    <label for="nivel-experiencia">Nivel de Experiencia (0-10):</label>
+                    <input type="range" id="nivel-experiencia" name="nivel-experiencia" 
+                        min="0" max="10" value="5" oninput="this.nextElementSibling.value = this.value">
+                    <output>5</output>
+            
+                    <label for="cv">Adjuntar CV (opcional):</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información Adicional</legend>
+
+                    <label for="comentarios">Comentarios o necesidades especiales:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"
+                    placeholder="Indique cualquier requerimiento especial, alergias alimentarias, necesidades de accesibilidad, etc."
+                    maxlength="1000"></textarea>
+
+                    <div class="checkbox-group" style="margin-top: 20px;">
+                    <label>
+                        <input type="checkbox" name="acepto-terminos" required>
+                        <span class="required">*</span> Acepto los términos y condiciones del evento
+                    </label>
+                    <br>
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Deseo recibir información sobre futuros eventos
+                        </label>
+                    </div>
+                </fieldset>
+        </form>
+    </body>
+</html>
