@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario de Registro</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="event-header">
+            <h1>TechFuture Summit 2025</h1>
+            <p class="event-subtitle">Congreso de Innovación y Tecnología | 15-17 Marzo 2025</p>
+            <p class="event-info">Centro de Convenciones TechHub, Santiago | Cupos limitados: 500 participantes</p>
+        </div>
+
         <h1>Inscripción</h1>
 
         <form action="/Procesar_inscripcion" method="post">
@@ -106,6 +113,9 @@
                         </label>
                     </div>
                 </fieldset>
+
+                <button type="submit">Enviar Inscripción</button>
+                <button type="reset" style="background: #6c757d; margin-top: 10px;">Limpiar Formulario</button>
         </form>
     </body>
 </html>
